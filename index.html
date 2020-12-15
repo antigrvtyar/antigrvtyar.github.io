@@ -6,10 +6,10 @@
 	<a-scene embedded arjs='sourceType: webcam;'>
     <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
     <a-assets>
-      <a-asset-item id="brainstem" src="https://cdn.aframe.io/test-models/models/brainstem/BrainStem.gltf"></a-asset-item>
+      <a-asset-item id="brainstem" src="./MODELS/drone/busterDrone.gltf"></a-asset-item>
     </a-assets>
-    <a-entity gltf-model="#brainstem" position="0 0 -5" scale="3 3 3"></a-entity>
 		<a-marker-camera preset='hiro'>
+      <a-entity gltf-model="#brainstem" position="0 0 0" scale="1 1 1" animation-mixer></a-entity>
     </a-marker-camera>
 	</a-scene>
 </body>
