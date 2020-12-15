@@ -40,11 +40,8 @@
 </a>
 
 	<a-scene preloader vr-mode-ui="enabled: false" embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
-    <a-assets>
-      <a-asset-item id="brainstem" src="./MODELS/drone/busterDrone.gltf" preload="true"></a-asset-item>
-    </a-assets>
-		<a-marker-camera type='pattern' url='./Pattern/pattern-AG-LOGO.patt'>
-      <a-entity gltf-model="#brainstem" position="0 0.5 0" scale="0.7 0.7 0.7" animation-mixer="clip: BusterDrone"></a-entity>
-    </a-marker-camera>
+    <a-box position='0 0.5 0' material='opacity: 1;'></a-box>
+    <a-text position='0 1 0' value="antigravity.id" scale="2 2 2"></a-text>
+		<a-marker-camera type='pattern' url='./Pattern/pattern-AG-LOGO.patt'> </a-marker-camera>
 	</a-scene>
 </body>
