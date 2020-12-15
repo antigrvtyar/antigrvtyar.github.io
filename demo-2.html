@@ -11,8 +11,6 @@
 
   <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
-  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-  <script src="https://cdn.rawgit.com/gladeye/aframe-preloader-component/1.0.2/dist/aframe-preloader-component.min.js"></script>
 
   <style>
     .a-enter-vr-button{
@@ -39,7 +37,7 @@
     </svg>
 </a>
 
-	<a-scene preloader vr-mode-ui="enabled: false" embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
+	<a-scene vr-mode-ui="enabled: false" embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
     <a-box position='0 0.5 0' material='opacity: 1;'></a-box>
     <a-text position='0 1 0' value="antigravity.id" scale="2 2 2"></a-text>
 		<a-marker-camera type='pattern' url='./Pattern/pattern-AG-LOGO.patt'> </a-marker-camera>
