@@ -9,9 +9,10 @@
     <a-assets>
       <a-asset-item id="brainstem" src="./MODELS/drone/busterDrone.gltf"></a-asset-item>
     </a-assets>
-		<a-marker-camera type='pattern' url='./Pattern/pattern-AG-LOGO.patt'>
+		<a-marker-camera preset='hiro'>
       <!-- <a-text value="Hello, World!" position="0 0 0"></a-text> -->
-      <a-entity gltf-model="#brainstem" position="0 0 0" scale="0.3 0.3 0.3" animation-mixer="clip: BusterDrone"></a-entity>
+      <a-entity gltf-model="#brainstem" position="0 0.5 0" scale="0.7 0.7 0.7" animation-mixer="clip: BusterDrone"></a-entity>
     </a-marker-camera>
 	</a-scene>
 </body>
+
