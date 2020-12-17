@@ -1,0 +1,55 @@
+<head>
+  <title>AR Marker - Experience by antigravity.id</title>
+  <link rel="shortcut icon" href="https://antigravity.id/assets/favicon/favicon.ico">
+  
+  <!-- Bootstrap Bootswatch theme CSS - other themes available here: https://bootswatch.com -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/thomaspark/bootswatch/gh-pages/slate/bootstrap.min.css" />
+  
+  <!-- Bootstrap JS Dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+  <script src="https://cdn.rawgit.com/gladeye/aframe-preloader-component/1.0.2/dist/aframe-preloader-component.min.js"></script>
+
+  <style>
+    .a-enter-vr-button{
+      display: none;
+    }
+  </style>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+  <a href="https://antigravity.id/" style="display: block;position: fixed; top: 20px;left: 20px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="132" height="15" viewBox="0 0 132 15">
+        <g class="logoag" fill="#fff" fill-rule="nonzero">
+            <polygon id="Path" points="118.665722 14.5 115.334278 14.5 115.334278 8.20101597 110 0.5 113.946176 0.5 116.98017 5.57982583 120.073654 0.5 124 0.5 118.665722 8.26197388"></polygon>
+            <circle id="Oval-3" cx="129" cy="11.5" r="3"></circle>
+            <polygon id="Path" points="100.743786 3.46661829 97 3.46661829 97 0.5 108 0.5 108 3.46661829 104.256214 3.46661829 104.256214 14.5 100.743786 14.5"></polygon>
+            <polygon id="Path" points="88.0669014 14.5 84 0.5 87.3697183 0.5 89.5 9.0341074 91.5915493 0.5 95 0.5 90.9137324 14.5"></polygon>
+            <path d="M75.1870229,14.5 L72,14.5 L72,0.5 L77.4389313,0.5 C80.5305344,0.5 81.9427481,2.83671988 81.9427481,5.17343977 C81.9427481,7.16473149 80.9312977,9.09506531 78.7938931,9.66400581 L82,14.5 L78.2977099,14.5 L75.4732824,9.82656023 L75.1870229,9.82656023 L75.1870229,14.5 Z M77.2862595,3.46661829 L75.1870229,3.46661829 L75.1870229,6.90058055 L77.2862595,6.90058055 C78.3358779,6.90058055 78.7175573,6.0065312 78.7175573,5.17343977 C78.7175573,4.34034833 78.3358779,3.46661829 77.2862595,3.46661829 Z" id="Combined-Shape"></path>
+            <path d="M68.5697842,2.91584158 L66.0719424,4.9950495 C65.3467626,4.12376238 64.3194245,3.56930693 63.1510791,3.56930693 C61.0359712,3.56930693 59.4043165,5.33168317 59.4043165,7.50990099 C59.4043165,9.64851485 61.0359712,11.490099 63.1510791,11.490099 C64.7827338,11.490099 66.0316547,10.9356436 66.3338129,9.66831683 L62.4460432,9.66831683 L62.4460432,7.01485149 L70,7.01485149 C70,12.2425743 67.1395683,14.5 63.1510791,14.5 C59.142446,14.5 56,11.3514851 56,7.50990099 C56,3.62871287 59.142446,0.5 63.1510791,0.5 C65.4071942,0.5 67.3611511,1.45049505 68.5697842,2.91584158 Z" id="Path"></path>
+            <polygon id="Path" points="44 14.5 44 0.5 48 0.5 48 14.5"></polygon>
+            <polygon id="Path" points="34.0771192 3.46661829 30.3333333 3.46661829 30.3333333 0.5 41.3333333 0.5 41.3333333 3.46661829 37.5895475 3.46661829 37.5895475 14.5 34.0771192 14.5"></polygon>
+            <polygon id="Path" points="24.1609415 0.5 27.6666667 0.5 27.6666667 14.5 24.6017812 14.5 20.1723919 6.85994194 20.1723919 14.5 16.6666667 14.5 16.6666667 0.5 19.836514 0.5 24.1609415 8.03846154"></polygon>
+            <path d="M3.81818182,0.5 L7.79897334,0.5 L14,14.5 L10.0192085,14.5 L3.81818182,0.5 Z M3.18109913,8.13636364 L6.36363636,14.5 L0,14.5 L3.18109913,8.13636364 Z" id="Combined-Shape"></path>
+        </g>
+    </svg>
+</a>
+
+	<a-scene preloader vr-mode-ui="enabled: false" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+    <a-assets>
+      <a-asset-item id="brainstem" src="./MODELS/drone/busterDrone.gltf" preload="true"></a-asset-item>
+    </a-assets>
+
+    <!-- define your markers -->
+    <a-marker type='barcode' value='6'>
+      <!-- here define the content to display on top of the marker -->
+      <a-entity gltf-model="#brainstem" position="0 0.5 0" scale="2 2 2" animation-mixer="clip: BusterDrone"></a-entity>
+    </a-marker>
+    <!-- define a simple camera -->
+    <a-entity camera></a-entity>
+	</a-scene>
+</body>
