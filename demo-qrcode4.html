@@ -32,11 +32,12 @@
         </g>
     </svg>
 </a>
+
   <a-scene
       vr-mode-ui="enabled: false;"
       loading-screen="enabled: true;"
       renderer="logarithmicDepthBuffer: true;"
-      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
       id="scene"
       embedded
       gesture-detector
@@ -50,7 +51,9 @@
 
       <a-marker
           id="animated-marker"
-          type='barcode' value='6'
+          type="pattern"
+          preset="custom"
+          url="assets/marker.patt"
           raycaster="objects: .clickable"
           emitevents="true"
           cursor="fuse: false; rayOrigin: mouse;"
@@ -58,7 +61,7 @@
       >
           <a-entity
               id="bowser-model"
-              scale="3.555555570272752 3.555555570272752 3.555555570272752"
+              scale="0.555555570272752 0.555555570272752 0.555555570272752"
               animation-mixer="loop: repeat"
               gltf-model="#animated-asset"
               class="clickable"
