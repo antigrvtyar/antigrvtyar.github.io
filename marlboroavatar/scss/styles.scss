@@ -38,9 +38,11 @@ body{
     z-index: 3;
     &__name{
       p{
-        font-size: 24px;
+        font-size: 32px;
         margin: 0;
         color: #D1091E;
+        font-family: 'Amatic SC' !important;
+        font-weight: bold;
       }
       span{
         display: block;
@@ -53,8 +55,9 @@ body{
     &__age{
       margin-top: 20px;
       p{
-        font-size: 18px;
+        font-size: 20px;
         margin: 0;
+        font-family: 'Fjalla One' !important;
       }
       span{
         display: block;
@@ -68,7 +71,7 @@ body{
       margin-top: 30px;
       display: flex;
       flex-flow: column;
-      width: 70%;
+      width: 60%;
       &-row{
         margin-bottom: 15px;
         select{
@@ -77,16 +80,21 @@ body{
           background-image: url(../images/bottom.svg);
           background-repeat: no-repeat;
           background-position: center right;
-          padding: 10px 10px 10px 10px !important;
-          font-size: 18px;
-          width: 95%;
+          padding: 10px 10px 10px 0 !important;
+          font-size: 20px !important;
+          width: 86%;
+          color: #000 !important;
+          font-family: 'Fjalla One' !important;
+          &:disabled{
+            opacity: .3;
+          }
         }
         span{
           display: block;
           margin-top: -10px;
           img{
             display: block;
-            width: 100%;
+            // width: 100%;
           }
         }
       }
@@ -125,6 +133,7 @@ body{
     h4{
       margin: 0 0 10px;
       font-size: 18px;
+      font-family: 'Fjalla One' !important;
     }
   }
   &-char{
