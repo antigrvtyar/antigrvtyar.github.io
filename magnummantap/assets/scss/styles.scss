@@ -1,5 +1,6 @@
 @import 'mixin';
 @import 'fonts';
+@import 'plyr';
 
 body{
   @include bp-425{
@@ -30,6 +31,10 @@ footer{
 
 .mainarea{
   position: relative;
+  .plyr__controls,
+  .plyr__control{
+    display: none !important;
+  }
   &__button{
     display: flex;
     justify-content: center;

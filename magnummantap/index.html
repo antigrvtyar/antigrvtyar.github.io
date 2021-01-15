@@ -627,15 +627,13 @@
   <!-- MAIN -->
   <main class="mainarea">
     <div class="mainarea__desktop">
-      <video autoplay="autoplay" loop>
-        <source src="assets/videos/DESKTOP_01.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+      <video id="desktop" playsinline loop autoplay controls data-poster="assets/videos/desktop.png">
+        <source src="assets/videos/DESKTOP_01.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="mainarea__mobile">
-      <video autoplay="autoplay" loop>
-        <source src="assets/videos/MOBILE_01.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+      <video id="mobile" playsinline loop autoplay controls data-poster="assets/videos/mobile.png">
+        <source src="assets/videos/MOBILE_01.mp4" type="video/mp4" />
       </video>
     </div>
 
@@ -868,9 +866,16 @@
   </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
+<script src="assets/js/plyr.js"></script>
 <script>
+  const desktop = new Plyr('#desktop', {
+    hideControls: true
+  });
+  const mobile = new Plyr('#mobile', {
+    hideControls: true
+  });
   $("html").click(function(){
-    $(".mainarea__desktop video").get(0).play();
-    $(".mainarea__mobile video").get(0).play();
+    desktop.play();
+    mobile.play();
   });
 </script>
