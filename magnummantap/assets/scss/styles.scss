@@ -1,0 +1,68 @@
+@import 'mixin';
+@import 'fonts';
+
+body{
+  @include bp-425{
+    // overflow: hidden;
+    // height: auto;
+    // min-height: auto !important;
+  }
+}
+
+// footer{
+//   padding: 0;
+// }
+
+.navbar-magnum .navbar-top{
+  @include bp-425{
+    padding: 1.2rem 0;
+  }
+}
+
+// HELPER
+.txt-white {
+  color: white;
+}
+
+footer{
+  padding-bottom: 7rem;
+}
+
+.mainarea{
+  position: relative;
+  &__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+    @media screen and (max-width: 500px){
+      .btn-mainskrng {
+        width: auto;
+        padding: .5rem .8rem;
+      }
+    }
+  
+  }
+  &__desktop{
+    @include bp-425{
+      display: none;
+    }
+    video{
+      width: 100%;
+      outline: none;
+    }
+  }
+  &__mobile{
+    display: none;
+    @include bp-425{
+      display: block;
+    }
+    video{
+      width: 100%;
+      outline: none;
+    }
+  }
+}
