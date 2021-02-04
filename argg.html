@@ -37,7 +37,7 @@
       loading-screen="enabled: true;"
       renderer="logarithmicDepthBuffer: true;"
       arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
-      stats gltf-model="dracoDecoderPath: ./draco/;"
+      gltf-model="dracoDecoderPath: ./draco/;"
       id="scene"
       embedded
       gesture-detector
@@ -62,6 +62,9 @@
               scale="4.555555570272752 4.555555570272752 4.555555570272752"
               animation-mixer="loop: repeat"
               gltf-model="#animated-asset"
+              cube-env-map="path: ./map/;
+                 extension: jpg;
+                 reflectivity: 0.9;"
               class="clickable"
               gesture-handler
           ></a-entity>
