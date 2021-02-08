@@ -45,13 +45,7 @@
       <a-assets>
           <a-asset-item
               id="animated-asset"
-              light="type: directional; color: #fff; intensity: 3" position="1 0 0"
-              light="type: hemisphere; color: #fff; groundColor: #fff; intensity: 2"
               light="type: point; intensity: 0.75; distance: 50; decay: 2" position="0 1 1"
-              light="type: spot; angle: 45"
-              cube-env-map="path: https://mkwy.fr/assets/cube-env/;
-                 extension: jpg;
-                 reflectivity: 1;"
               src="./ar/assets/suryanation2019.gltf"
           ></a-asset-item>
       </a-assets>
@@ -68,6 +62,10 @@
               id="bowser-model"
               scale="4.555555570272752 4.555555570272752 4.555555570272752"
               animation-mixer="loop: repeat"
+
+              cube-env-map="path: https://mkwy.fr/assets/cube-env/;
+                 extension: jpg;
+                 reflectivity: 0.9;"
               gltf-model="#animated-asset"
               class="clickable"
               gesture-handler
