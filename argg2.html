@@ -50,6 +50,12 @@
           ></a-asset-item>
       </a-assets>
 
+
+      <a-entity light="type: hemisphere; color: #fff; groundColor: #fff; intensity: 2"></a-entity>
+      <a-entity light="type: ambient; color: #fff"></a-entity>
+      <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"></a-entity>
+      <a-entity light="type: directional; color: #FFF; intensity: 4" position="-0.5 1 1"></a-entity>
+
       <a-marker
           id="animated-marker"
           type='barcode' value='6'
@@ -58,11 +64,6 @@
           cursor="fuse: false; rayOrigin: mouse;"
           id="markerA"
       >
-
-      <a-entity light="type: hemisphere; color: #fff; groundColor: #fff; intensity: 2"></a-entity>
-      <a-entity light="type: ambient; color: #fff"></a-entity>
-      <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"></a-entity>
-      <a-entity light="type: directional; color: #FFF; intensity: 4" position="-0.5 1 1"></a-entity>
           <a-entity
               id="bowser-model"
               scale="4.555555570272752 4.555555570272752 4.555555570272752"
@@ -75,7 +76,7 @@
               gesture-handler
           ></a-entity>
       </a-marker>
-
+      
       <a-entity camera></a-entity>
   </a-scene>
 
