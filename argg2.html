@@ -41,6 +41,7 @@
       id="scene"
       embedded
       gesture-detector
+      light="defaultLightsEnabled: false"
   >
       <a-assets>
           <a-asset-item
@@ -61,7 +62,8 @@
               id="bowser-model"
               scale="4.555555570272752 4.555555570272752 4.555555570272752"
               animation-mixer="loop: repeat"
-
+              light="type: point; intensity: 0.75; distance: 50; decay: 2"
+              position="0 10 10"
               cube-env-map="path: https://mkwy.fr/assets/cube-env/;
                  extension: jpg;
                  reflectivity: 0.9;"
