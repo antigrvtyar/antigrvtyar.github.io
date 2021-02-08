@@ -41,6 +41,7 @@
       id="scene"
       embedded
       gesture-detector
+      light="defaultLightsEnabled: false"
   >
       <a-assets>
           <a-asset-item
@@ -48,6 +49,15 @@
               src="./ar/assets/suryanation2019.gltf"
           ></a-asset-item>
       </a-assets>
+
+
+      <a-entity light="type: hemisphere; color: #fff; groundColor: #fff; intensity: 5"></a-entity>
+      <a-entity light="type: ambient; color: #fff"></a-entity>
+      <a-entity light="type: point; intensity: 3.75; distance: 50; decay: 2"></a-entity>
+      <a-entity light="type: point; intensity: 3.75; distance: 50; decay: 2" position="0 2 2"></a-entity>
+      <a-entity light="type: directional; color: #FFF; intensity: 3" position="-0.5 1 1"></a-entity>
+      <a-entity light="type: directional; color: #FFF; intensity: 3" position="0 2 0"></a-entity>
+      <a-entity light="type: spot; angle: 45"></a-entity>
 
       <a-marker
           id="animated-marker"
@@ -61,15 +71,15 @@
               id="bowser-model"
               scale="4.555555570272752 4.555555570272752 4.555555570272752"
               animation-mixer="loop: repeat"
-              gltf-model="#animated-asset"
-              cube-env-map="path: ./map/;
+              cube-env-map="path: https://mkwy.fr/assets/cube-env/;
                  extension: jpg;
                  reflectivity: 0.9;"
+              gltf-model="#animated-asset"
               class="clickable"
               gesture-handler
           ></a-entity>
       </a-marker>
-
+      
       <a-entity camera></a-entity>
   </a-scene>
 
