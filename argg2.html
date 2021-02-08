@@ -45,6 +45,10 @@
       <a-assets>
           <a-asset-item
               id="animated-asset"
+              light="type: directional; color: #fff; intensity: 1.5" position="-1 1 0"
+              cube-env-map="path: ./maps/;
+                 extension: jpg;
+                 reflectivity: 0.9;"
               src="./ar/assets/suryanation2019.gltf"
           ></a-asset-item>
       </a-assets>
@@ -59,13 +63,9 @@
       >
           <a-entity
               id="bowser-model"
-              light="type: directional; color: #fff; intensity: 1.5" position="-1 1 0"
               scale="4.555555570272752 4.555555570272752 4.555555570272752"
               animation-mixer="loop: repeat"
               gltf-model="#animated-asset"
-              cube-env-map="path: ./maps/;
-                 extension: jpg;
-                 reflectivity: 0.9;"
               class="clickable"
               gesture-handler
           ></a-entity>
