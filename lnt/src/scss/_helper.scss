@@ -1,0 +1,182 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - helper
+// define global helper
+img {
+    max-width: 100%;
+  }
+  
+  // - - layout
+  .divider {
+    margin: 20px 0;
+    background: transparent;
+    height: 1px;
+  
+    &--margin {
+      &-small {
+        margin: 5px 0;
+      }
+  
+      &-small-extra {
+        margin: 2.5px 0;
+      }
+  
+      &-big {
+        margin: 30px 0;
+      }
+  
+      &-normal {
+        margin: 10px 0;
+      }
+  
+      &-big-extra {
+        margin: 45px 0;
+      }
+    }
+  
+    &--mobile {
+      display: none;
+  
+      @include bp-768() {
+        display: block;
+      }
+    }
+  
+    &--border {
+    //   background: $color--white-flash;
+    }
+  }
+  
+  .text-center {
+    text-align: center;
+    &-sm{
+      @include bp-425() {
+        text-align: center !important;
+      }
+    }
+    &-md{
+      @include bp-768() {
+        text-align: center !important;
+      }
+    }
+    &-lg{
+      @include bp-1024() {
+        text-align: center !important;
+      }
+    }
+  }
+  .text-left {
+    text-align: left;
+    &-sm{
+      @include bp-425() {
+        text-align: left !important;
+      }
+    }
+    &-md{
+      @include bp-768() {
+        text-align: left !important;
+      }
+    }
+    &-lg{
+      @include bp-1024() {
+        text-align: left !important;
+      }
+    }
+  }
+  
+  .d-flex{
+    display: flex;
+
+    &--justify-content{
+        &-center{
+            justify-content: center;
+        }
+    }
+    &--justify-content-xl{
+      &-end{
+        justify-content: flex-end;
+      }
+    }
+    &--justify-content-lg{
+      @include bp-1024() {
+        &-center{
+          justify-content: center;
+        }
+      }
+    }
+    &--justify-content-md{
+      @include bp-768() {
+        &-center{
+          justify-content: center;
+        }
+      }
+    }
+  }
+  
+  .mobile-small-show {
+    display: none;
+  
+    @include bp-425() {
+      display: block;
+    }
+  }
+  
+  
+  .mobile-small-hide {
+    @include bp-425() {
+      display: none;
+    }
+  }
+  
+  .mobile-show {
+    display: none;
+  
+    @include bp-1024() {
+      display: block;
+    }
+  }
+  
+  .mobile-hide {
+    @include bp-1024() {
+      display: none !important;
+    }
+  }
+  
+  .mobile-sm-show {
+    display: none;
+    @include bp-768() {
+      display: block !important;
+    }
+  }
+  
+  .mobile-sm-hide {
+    @include bp-768() {
+      display: none !important;
+    }
+  }
+  
+  .desktop-hide {
+    display: none;
+  }
+  
+  //PADDING
+  .no-padding{
+    padding: 0 !important;
+    &-top{
+      padding-top: 0 !important;
+    }
+    &-bottom{
+      padding-bottom: 0 !important;
+    }
+    &-left{
+      padding-left: 0 !important;
+    }
+    &-right{
+      padding-right: 0 !important;
+    }
+  }
+
+  .block-image{
+    img{
+      display: block;
+    }
+  }

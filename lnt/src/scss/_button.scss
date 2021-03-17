@@ -1,0 +1,25 @@
+.button{
+    font: 400 20px "Neuland Grotesk Condensed",arial!important;
+    color: $color-white;
+    @include vendor(border-radius, 8px);
+    position: relative;
+    text-transform: none;
+    padding: 12px 24px;
+    width: auto;
+    background: $color-red;
+    border: 2px solid $color-red;
+    @include vendor(transition, all cubic-bezier(0.39, 0.575, 0.565, 1) 250ms);
+    outline: none;
+    cursor: pointer;
+    &:hover{
+        background: $color-red-2;
+    }
+    &--border{
+        background: $color-white;
+        color: $color-red;
+        &:hover{
+            background: $color-red-2;
+            color: $color-white;
+        }
+    }
+}

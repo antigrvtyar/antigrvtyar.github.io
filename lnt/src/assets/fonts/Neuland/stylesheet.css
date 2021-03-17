@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Neuland Grotesk';
+    src: url('NeulandGroteskBold.woff2') format('woff2'),
+        url('NeulandGroteskBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuland Grotesk Condensed';
+    src: url('NeulandGroteskCondensedBold.woff2') format('woff2'),
+        url('NeulandGroteskCondensedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuland Grotesk Condensed';
+    src: url('NeulandGroteskCondensedLight.woff2') format('woff2'),
+        url('NeulandGroteskCondensedLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuland Grotesk Condensed';
+    src: url('NeulandGroteskCondensedRegular.woff2') format('woff2'),
+        url('NeulandGroteskCondensedRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuland Grotesk';
+    src: url('NeulandGroteskLight.woff2') format('woff2'),
+        url('NeulandGroteskLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuland Grotesk';
+    src: url('NeulandGroteskRegular.woff2') format('woff2'),
+        url('NeulandGroteskRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
