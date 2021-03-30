@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag 3D</title>
+</head>
+<body>
+    <script>
+        import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.114/build/three.module.js";
+        import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.114/examples/jsm/controls/OrbitControls.js";
+        import { DragControls } from "https://cdn.jsdelivr.net/npm/three@0.114/examples/jsm/controls/DragControls.js";
+
+        var camera, scene, renderer;
+
+        var objects = [];
+
+        init();
+        animate();
+
+        function init() {
+
+            camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
+            camera.position.z = 1;
+
+            scene = new THREE.Scene();
+
+            var geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
+            var material = new THREE.MeshNormalMaterial();
+
+            var mesh = new THREE.Mesh( geometry, material );
+            scene.add( mesh );
+                objects.push( mesh );
+
+            renderer = new THREE.WebGLRenderer( { antialias: true } );
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            document.body.appendChild( renderer.domElement );
+                
+                const orbitControls = new OrbitControls( camera, renderer.domElement );
+                
+                const dragControls = new DragControls( objects, camera, renderer.domElement );
+                dragControls.addEventListener( 'dragstart', function () { orbitControls.enabled = false; } );
+                dragControls.addEventListener( 'dragend', function () { orbitControls.enabled = true; } );
+
+        }
+
+        function animate() {
+
+            requestAnimationFrame( animate );
+            renderer.render( scene, camera );
+
+        }
+    </script>
+</body>
+</html>
