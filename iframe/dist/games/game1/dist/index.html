@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>GAME 1</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <meta name="description" content="GAME 1" />
+    <meta name="keywords" content="social content network, social network" />
+    <meta name="robots" content="index" />
+    <meta name="author" content="antigravity.id" />
+    <meta name="designer" content="antigravity.id" />
+
+    <!-- Facebook -->
+    <meta property="og:title" content="GAME 1" />
+    <meta property="og:site_name" content="GAME 1" />
+    <meta property="og:description" content="GAME 1" />
+    <meta property="og:url" content="/_url" />
+    <meta property="og:image" content="assets/images/img-to-share.jpg" />
+    <meta property="og:type" content="website" />
+
+    <!-- Google+ -->
+    <meta itemprop="name" content="Name" />
+    <meta itemprop="description" content="GAME 1" />
+    <meta itemprop="image" content="assets/images/img-to-share.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="GAME 1" />
+    <meta name="twitter:description" content="GAME 1" />
+    <meta name="twitter:image" content="assets/images/img-to-share.jpg" />
+
+    <meta name="theme-color" content="#e10101" />
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/main.min-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=LYUHCbq9NL1HBoIFw4OGcQ&gtm_preview=env-2&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-M8P56CW');</script>
+      <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+  
+    
+    <div class="preloader" id="loading">
+      <div class="preloader__content">
+          <div class="block-image">
+              <img src="./assets/images/logo-marlboro.png" alt="Marlboro" />
+          </div>
+          <p id="textLoading3D">Waiting, please wait...</p>
+          <div class="loading">
+              <div class="loader">
+                  <div class="trackbar">
+                      <div class="loadbar"></div>
+                  </div>
+              </div>
+              <div class="percentage" id="persen"></div>
+          </div>
+      </div>
+    </div>
+
+    <!-- <a href="/landing/index.html" class="back"><div class="block-image"><img src="./assets/images/back.svg" alt="<"></div></a> -->
+
+    <!-- GAMEPLAY AREA -->
+    <div class="notif hide" id="notifBerhasil">
+      <span>Tepat Sekali!</span>
+    </div>
+    <div class="notif hide" id="notifGagal">
+      <span>Cari lagi!</span>
+    </div>
+
+    <div class="gameplay-time hide" id="barWaktu">
+      <div class="gameplay-time__text"><span id="waktuMain">0</span><span>s</span></div>
+      <div class="gameplay-time__circle">
+          <svg class="center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+              <circle class="path-2" cx="60" cy="60" r="54" fill="none" stroke-width="12" stroke="#fff" />
+              <circle class="path-1" cx="60" cy="60" r="54" fill="none" stroke-width="12" stroke="#E41010" id="svgProgress" />             
+          </svg>
+      </div>
+    </div>
+    <div class="gameplay-hint hide" id="barHint" onclick="openHint()">
+      <div class="gameplay-hint__image" style="background-image: url(./assets/images/puzzles/guide-r.jpeg);"></div>
+      <div class="gameplay-hint__progress"><span id="progressClue">0</span><span>/5</span></div>
+    </div>
+
+    <!-- <div class="bar bar--waktu hide" id="barWaktu">
+      <div class="block-image"><img src="./assets/images/bar-waktu.svg" alt=""></div>
+      <div class="bar__content">
+        <div class="bar__icon"><div class="block-image"><img src="./assets/images/icons/waktu.svg" alt="SRC"></div></div>
+        <div class="bar__text"><span id="waktuMain">00:00</span></div>
+      </div>
+    </div> -->
+    <div class="bar bar--level hide" id="barLevel" style="display: none !important;">
+      <div class="block-image"><img src="./assets/images/bar-level.svg" alt=""></div>
+      <div class="bar__content">
+        <div class="bar__text"><span>Level</span> <span id="levelText">1</span></div>
+      </div>
+    </div>
+    <div class="bar bar--skor hide" id="barSkor" style="display: none !important;">
+      <div class="block-image"><img src="./assets/images/bar-skor.svg" alt=""></div>
+      <div class="bar__content">
+        <div class="bar__text"><span id="scoreText">0</span></div>
+      </div>
+    </div>
+    <div class="clue hide" style="display: none !important;">
+      <div class="block-image"><img src="./assets/images/bg-clue.png" alt="SRC"></div>
+      <div class="clue__content">
+        <div class="clue__btn" id="cluePrev" onclick="cluePilih()"><div class="block-image"><img src="./assets/images/icons/prev-clue.svg" alt="SRC"></div></div>
+        <div class="clue__text"><p id="clueText">-</p></div>
+        <div class="clue__btn" id="clueNext" onclick="cluePilih()"><div class="block-image"><img src="./assets/images/icons/next-clue.svg" alt="SRC"></div></div>
+      </div>
+    </div>
+    <!-- !GAMEPLAY AREA -->
+
+    <!-- PAGE SCREEN -->
+    <div class="backdrop hide" id="backdrop">&nbsp;</div>
+    <div class="page page--homescreen" id="pageHomescreen" style="background-image: url(./assets/images/homescreen.jpeg);">
+      
+      <div class="modalx modalx--center hidex" id="modalMissionQuiz1Welcome">
+        <div class="modalx__content modalx__content--mod3">
+            <h3 class="modalx-title">Lengkapi potongan gambar!</h3>
+            <div class="modalx-text">
+              <p>Cari bagian yang hilang dan susun gambar sesuai petunjuk di bawah.</p>
+            </div>
+            <div class="modalx-hint">
+              <div class="img"><img src="./assets/images/puzzles/guide.jpeg" alt="Marlboro"></div>
+            </div>
+            <div class="divider divider--margin-normal"></div>
+            <div class="d-flex d-flex--justify-content-center">
+                <button class="button button--block" onclick="playNow('pertamamain')">OK, MULAI</button>
+            </div>
+        </div>
+      </div>
+      <div class="backdrop" id="backdrop2">&nbsp;</div>
+    </div>
+    <!-- !PAGE SCREEN -->
+
+    <!-- 360 -->
+    <div id="panel">
+        <div id="panorama"></div>
+    </div>
+    <!-- !360 -->
+
+    <!-- MODAL -->
+    
+    <!-- mdl clue -->
+    <div class="modalx modalx--center hide" id="modalClue">
+      <div class="modalx__content modalx__content--mod3">
+          <div class="modalx-close modalxClose"><div class="img"><img src="./assets/images/icon-close-mid.png" alt="X"></div></div>
+          
+          <h3 class="modalx-title">Lengkapi potongan gambar!</h3>
+          <div class="modalx-text">
+            <p>Cari bagian yang hilang dan susun gambar sesuai petunjuk di bawah.</p>
+          </div>
+          <div class="modalx-hint" id="imgPzlHint">
+            <div class="img"><img src="./assets/images/puzzles/guide.jpeg" alt="Marlboro"></div>
+          </div>
+      </div>
+    </div>
+    <div class="modalx modalx--center hide" id="modalClue2">
+      <div class="modalx__content modalx__content--mod3">
+          <div class="modalx-close modalxClose"><div class="img"><img src="./assets/images/icon-close-mid.png" alt="X"></div></div>
+          
+          <h3 class="modalx-title text-center" style="margin-bottom: 0;">Potongan ditemukan!</h3>
+          <div class="modalx-text text-center" style="margin-top: 0;">
+            <p>Cari potongan gambar yang lain.</p>
+          </div>
+          <div class="modalx-hint" id="imgPzlHint2">
+            <div class="img"><img src="./assets/images/puzzles/guide.jpeg" alt="Marlboro"></div>
+          </div>
+          <div class="divider divider--margin-small"></div>
+          <div class="divider divider--margin-small"></div>
+          <div class="d-flex d-flex--justify-content-center">
+            <button class="button button--block modalxClose">CARI POTONGAN LAIN</button>
+          </div>
+      </div>
+    </div>
+    <div class="modalx modalx--center hide" id="modalFinish">
+      <div class="modalx__content modalx__content--mod3">
+          
+          <h3 class="modalx-title text-center" style="margin-bottom: 0;">Selamat lo berhasil menyelesaikan misi ini</h3>
+          <div class="divider divider--margin-small-extra"></div>
+          <div class="modalx-text text-center" style="margin-top: 0;">
+            <p>Lo bebas untuk lanjut menyelesaikan misi berikutnya.</p>
+          </div>
+          <div class="modalx-hint">
+            <div class="img"><img src="./assets/images/puzzles/guide-r.jpeg" alt="Marlboro"></div>
+          </div>
+          <div class="modalx-text text-center">
+            <p><i>Pursue Freedom, Pursue Flavor is starting now!</i></p>
+          </div>
+          <div class="divider divider--margin-small"></div>
+          <div class="divider divider--margin-small"></div>
+          <div class="d-flex d-flex--justify-content-center">
+            <button class="button button--block" onclick="mission1Close()">MISI SELANJUTNYA</button>
+          </div>
+      </div>
+    </div>
+
+    
+    <!-- mdl point -->
+    <div class="modalx modalx--center hide" id="modalMissionPoint">
+      <div class="modalx__content modalx__content--mod modalx__content--mod-2">
+          <div class="d-flex d-flex--justify-content-center">
+              <div class="img"><img src="assets/images/icon-poin.svg" alt="Marlboro"></div>
+          </div>
+          <div class="divider divider--margin-small"></div>
+          <h3 class="modalx-title text-center">Selamat! lo berhasil selesaikan misi ini dan mendapatkan point</h3>
+          <div class="modalx-text text-center">
+              <p>Lo bisa cek misi lainnya yang tersedia <br><i>Pursue Freedom, Pursue Flavor</i></p>
+          </div>
+      </div>
+    </div>
+
+    <!-- mdl puzzlesalah -->
+    <div class="modalx modalx--center hide" id="modalPuzzleSalah">
+      <div class="modalx__content modalx__content--mod3">
+          
+          <div class="d-flex d-flex--justify-content-center" id="imgPzlSalah"></div>
+          <div class="divider divider--margin-small"></div>
+          <h3 class="modalx-title text-center">Potongan gambar yang lo pilih belum pas.</h3>
+          
+          <div class="divider divider--margin-small"></div>
+          <div class="divider divider--margin-small"></div>
+          <div class="d-flex d-flex--justify-content-center">
+            <button class="button button--block modalxClose">CARI POTONGAN LAIN</button>
+          </div>
+      </div>
+    </div>
+
+    <div class="modalx modalx--center hide" id="modalWaktuHabis">
+      <div class="modalx__content modalx__content--mod3">
+          
+          <h3 class="modalx-title text-center">Waktu Lo Habis!</h3>
+          <div class="modalx-text text-center">
+            <p>Cari bagian yang hilang dan susun gambar sesuai petunjuk.</p>
+          </div>
+          <div class="divider divider--margin-small"></div>
+          <div class="divider divider--margin-small"></div>
+          <div class="d-flex d-flex--justify-content-center">
+            <button class="button button--block" onclick="playNow('mainlagi')">MAIN LAGI</button>
+          </div>
+      </div>
+    </div>
+
+    <!-- INSTRUCTION -->
+
+    <script src="js/app.min-min.js"></script>
+</body>
+
+</html>

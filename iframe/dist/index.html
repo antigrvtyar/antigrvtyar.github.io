@@ -1,0 +1,103 @@
+<!-- //...................................................antigravity.id..........................................................-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marlboro Pursue Flavour</title>
+    <meta name="viewport" content="width = device-width, initial-scale =1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = 0, minimal-ui" />
+
+	<link rel="shortcut icon" href="assets/images/favicon.png"/>
+	<meta name="description" content="Marlboro Pursue Flavour" />
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/libs-homescreen.min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=LYUHCbq9NL1HBoIFw4OGcQ&gtm_preview=env-2&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M8P56CW');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div class="preloader" id="loading">
+        <div class="preloader__content">
+            <div class="block-image">
+                <img src="assets/images/logo-marlboro.png" alt="Marlboro" />
+            </div>
+            <p>Waiting, please wait...</p>
+            <div class="loading">
+                <div class="loader">
+                    <div class="trackbar">
+                        <div class="loadbar"></div>
+                    </div>
+                </div>
+                <div class="percentage" id="persen"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- !PRELOADER -->
+
+    <main>
+        <section class="homescreen" id="pageHomescreen">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="homescreen__content">
+                            <h1><span>Welcome To</span><span>The City Of Freedom</span></h1>
+                            <p>Ini adalah waktu yang tepat dimana lo punya <i>freedom</i> jadi diri sendiri dan bebas nentuin <i>flavor</i> lo.</p>
+                            <button class="button button--white" onclick="startWelcome()">START NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="prologue hide" id="pagePrologue">
+            <!-- <div class="prologue__cover"></div>
+            <video id="prologueVideo" playsinline data-poster="./assets/videos/prologue.jpeg">
+                <source src="./assets/videos/prologue.mp4" type="video/mp4" />
+                <source src="./assets/videos/prologue.webm" type="video/webm" />
+            </video> -->
+        </section>
+        <section class="car hide" id="pageCar">
+            <div class="car-thumb">
+                <nav id="carThumb">
+                    <a href="javascript:;" onclick="selectCar(0, 'click')"><div class="img"><img src="./assets/images/car-icon-1.png" alt="Marlboro"></div></a>
+                    <a href="javascript:;" onclick="selectCar(1, 'click')"><div class="img"><img src="./assets/images/car-icon-2.png" alt="Marlboro"></div></a>
+                </nav>
+                <div class="car-thumb__button" id="carThumbButton" onclick="confirmCar('home')"><div class="inner">
+                    <div></div>
+                    <span>START<br>NOW</span>
+                </div></div>
+            </div>
+            <div class="car-title">
+                <h4>Choose Your Vehicle to Pursue Freedom</h4>
+                <div id="appendCarThumb" class="car-thumb car-thumb--mod"></div>
+            </div>
+            <div class="car-name">
+                <div class="car-name__wrapper" id="carName">
+                    <h2><span>SUPER</span>&nbsp;<span>CAR</span></h2>
+                    <h2><span>SUV</span>&nbsp;<span>CAR</span></h2>
+                </div>
+                <div id="appendCarThumbButton" class="car-thumb car-thumb--mod"></div>
+            </div>
+            <div class="car-display">
+                <div class="car-display__wrapper" id="carDisplay">
+                    <div class="img"><img src="./assets/images/car-1.png" alt="Marlboro"></div>
+                    <div class="img"><img src="./assets/images/car-2.png" alt="Marlboro"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <script src="js/app/data.min-min.js"></script>
+    <script src="js/app/default.min-min.js"></script>
+    <script src="js/app/app-selectcar.min-min.js"></script>
+    <script src="js/app-homescreen.min-min.js"></script>
+    <script src="js/loading.min-min.js"></script>
+</body>
+</html>

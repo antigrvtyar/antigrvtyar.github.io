@@ -1,0 +1,144 @@
+<!-- //...................................................antigravity.id..........................................................-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marlboro Pursue Flavour</title>
+    <meta name="viewport" content="width = device-width, initial-scale =1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = 0, minimal-ui" />
+
+	<link rel="shortcut icon" href="assets/images/favicon.png"/>
+	<meta name="description" content="Marlboro Pursue Flavour" />
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/libs-car.min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=LYUHCbq9NL1HBoIFw4OGcQ&gtm_preview=env-2&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M8P56CW');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+    
+    <!-- PRELOADER -->
+    <div class="preloader" id="loading">
+        <div class="preloader__content">
+            <div class="block-image">
+                <img src="./assets/images/logo-marlboro.png" alt="Marlboro" />
+            </div>
+            <p id="textLoading3D">Waiting, please wait...</p>
+            <div class="loading">
+                <div class="loader">
+                    <div class="trackbar">
+                        <div class="loadbar"></div>
+                    </div>
+                </div>
+                <div class="percentage" id="persen"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- !PRELOADER -->
+
+    <!-- MODAL -->
+    <!-- mdl stagelock -->
+    <div class="modal modal--center hide" id="modalDistrictLock">
+        <div class="modal__content">
+            <div class="d-flex d-flex--justify-content-center">
+                <div class="stage lock">
+                    <div class="stage__status">
+                        <div><img src="assets/images/icon-gembok.svg" alt="Marlboro"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider divider--margin-small"></div>
+            <h3 class="modal-title text-center">--</h3>
+            <div class="modal-text text-center">
+                <p>Sekarang lo belum bisa explore <i><span id="rilisStageRuangan">--</span></i>, tapi lo bisa <i>explore District</i> lainnya dan selesain misi disana.</p>
+            </div>
+            <div class="divider divider--margin-normal"></div>
+            <div class="d-flex d-flex--justify-content-center">
+                <button class="button modalClose">KEMBALI</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- mdl welcome -->
+    <div class="popup popup--mod" id="popupWelcome">
+        <div class="popup-text">
+            <h5>Selamat Datang!</h5>
+            <p>Lo bisa mulai dari distrik yang udah terbuka untuk dimasuki. Lakukan tantangan satu per satu <i>and unlock exciting experiencenya! Pursue your freedom now!</i></p>
+            <div>
+                <div class="divider divider--margin-small"></div>
+                <button class="button button--block-mobile" onclick="mulaiSekarangMap()">MULAI SEKARANG</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="backdrop hide" id="backdrop">&nbsp;</div>
+    <!-- !MODAL -->
+
+    <!-- DRAG INFO -->
+    <div class="drag-info hide">
+        <lottie-player src="./assets/motion/Drag/data.json" background="transparent" speed="1" loop id="dragInfo"></lottie-player>
+    </div>
+    <!-- !DRAG INFO -->
+
+    <!-- NAVIGATION HEADER -->
+    <div class="nav-top-left">
+        <a href="javascript:;" onclick="changeCarOpen()" class="nav-button-icon">
+            <div class="img img--mod"><div><img src="./assets/images/car-icon-1.png" alt="Marlboro" id="carImage"></div></div>
+            <p>Change&nbsp;Car</p>
+        </a>
+        <a href="javascript:;" onclick="prologueOpen()" class="nav-button-icon">
+            <div class="img"><img src="./assets/images/play-icon.svg" alt="Marlboro"></div>
+            <p>About&nbsp;City&nbsp;of&nbsp;Freedom</p>
+        </a>
+    </div>
+    <!-- !NAVIGATION HEADER -->
+
+    <main>
+        <section class="prologue hide" id="pagePrologue"></section>
+        <section class="car hide" id="pageCar">
+            <div class="car-thumb">
+                <nav id="carThumb">
+                    <a href="javascript:;" onclick="selectCar(0, 'click')"><div class="img"><img src="./assets/images/car-icon-1.png" alt="Marlboro"></div></a>
+                    <a href="javascript:;" onclick="selectCar(1, 'click')"><div class="img"><img src="./assets/images/car-icon-2.png" alt="Marlboro"></div></a>
+                </nav>
+                <div class="car-thumb__button" id="carThumbButton" onclick="confirmCar()"><div class="inner">
+                    <div></div>
+                    <span>CONTINUE</span>
+                </div></div>
+            </div>
+            <div class="car-title">
+                <h4>Change Your Car</h4>
+                <div id="appendCarThumb" class="car-thumb car-thumb--mod"></div>
+            </div>
+            <div class="car-name">
+                <div class="car-name__wrapper" id="carName">
+                    <h2><span>SUPER</span>&nbsp;<span>CAR</span></h2>
+                    <h2><span>SUV</span>&nbsp;<span>CAR</span></h2>
+                </div>
+                <div id="appendCarThumbButton" class="car-thumb car-thumb--mod"></div>
+            </div>
+            <div class="car-display">
+                <div class="car-display__wrapper" id="carDisplay">
+                    <div class="img"><img src="./assets/images/car-1.png" alt="Marlboro"></div>
+                    <div class="img"><img src="./assets/images/car-2.png" alt="Marlboro"></div>
+                </div>
+            </div>
+        </section>
+        <canvas class="webgl"></canvas>
+    </main>
+
+    
+    <script src="js/app/data.min-min.js"></script>
+    <script src="js/app/default.min-min.js"></script>
+    <script src="js/app/app-selectcar.min-min.js"></script>
+    <script src="js/app/app-map.min-min.js" type="module"></script>
+</body>
+</html>

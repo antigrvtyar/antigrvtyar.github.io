@@ -1,0 +1,197 @@
+@keyframes slideUp {
+  from {
+    -webkit-transform: translate(0, 50px);
+   -moz-transform: translate(0, 50px);
+    -ms-transform: translate(0, 50px);
+     -o-transform: translate(0, 50px);
+        transform: translate(0, 50px); 
+    opacity:0;
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+   -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+     -o-transform: translate(0, 0);
+        transform: translate(0, 0); 
+    opacity:1;
+  }
+}
+@keyframes login {
+  from {
+    background-size: 160%;
+  }
+  to {
+    background-size: 190%;
+  }
+}
+
+@keyframes slideUpdua {
+  from {bottom: -400px;}
+  to {bottom: 0;}
+}
+@keyframes slideUpsatu {
+  from {bottom: -100px;}
+  to {bottom: 0;}
+}
+@keyframes slideUp_ {
+  from {top: 100px; opacity:0;}
+  to {top: 20px; opacity:1;}
+}
+@keyframes slideDown {
+  from {top: 0;}
+  to {top: -100px;}
+}
+@keyframes headerdown {
+  from {top: -100px;}
+  to {top: 0;}
+}
+@keyframes logohover {
+  from {margin-left: 50px;}
+  to {margin-left: 0;}
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    -ms-transform: scale(0.5, 0.5); /* IE 9 */
+    -webkit-transform: scale(0.5, 0.5); /* Chrome, Safari, Opera */
+    transform: scale(0.5, 0.5);
+  }
+  to {
+    opacity: 1;
+    -ms-transform: scale(1, 1); /* IE 9 */
+    -webkit-transform: scale(1, 1); /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+   }
+}
+@keyframes rotate {
+  from {
+    opacity: 0;
+    -ms-transform: scale(0.5, 0.5); /* IE 9 */
+    -webkit-transform: scale(0.5, 0.5); /* Chrome, Safari, Opera */
+    transform: scale(0.5, 0.5);
+  }
+  to {
+    opacity: 0;
+    -ms-transform: scale(1, 1); /* IE 9 */
+    -webkit-transform: scale(1, 1); /* Chrome, Safari, Opera */
+    transform: scale(1, 1);
+  }
+}
+@keyframes fadeindua {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+   }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes zoom200 {
+  0% {
+      @include scale(1);
+  }
+  50% {
+      @include scale(1.4);
+  }
+  100% {
+      @include scale(1);
+  }
+}
+@-webkit-keyframes blinking {
+0% {@include scale(1);}
+50% {@include scale(1.1);}
+100% {@include scale(1);}
+}
+@-webkit-keyframes rotateB {
+0% {@include rotate(5deg);}
+30% {@include rotate(-5deg);}
+60% {@include rotate(5deg);}
+100% {@include rotate(-5deg);}
+}
+@keyframes rem-1 {
+to {
+  stroke-dashoffset: -339.292;
+}
+} 
+@keyframes rem-2 {
+from{
+  @include rotate(0deg);
+}
+to {
+  @include rotate(360deg);
+}
+} 
+
+.slideUp {
+animation-name: slideUp;
+  animation-duration: 0.5s;
+}
+
+.animateout {
+animation-name: fadeout;
+  animation-duration: 0.5s;
+}
+.animatein {
+animation-name: fadein;
+  animation-duration: 0.5s;
+}
+
+a.animated-button:link, a.animated-button:visited {
+position: relative;
+display: block;
+margin: 30px auto 0;
+padding: 14px 15px;
+color: #fff;
+font-size:14px;
+font-weight: bold;
+text-align: center;
+text-decoration: none;
+text-transform: uppercase;
+overflow: hidden;
+letter-spacing: .08em;
+border-radius: 0;
+text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+content: "";
+position: absolute;
+height: 0%;
+left: 50%;
+top: 50%;
+width: 150%;
+z-index: -1;
+-webkit-transition: all 0.75s ease 0s;
+-moz-transition: all 0.75s ease 0s;
+-o-transition: all 0.75s ease 0s;
+transition: all 0.75s ease 0s;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover {
+color: #FFF;
+text-shadow: none;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+height: 450%;
+}
+
+a.animated-button.victoria-one {
+border: 2px solid #D24D57;
+}
+a.animated-button.victoria-one:after {
+background: #D24D57;
+-moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+-ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+-webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+}

@@ -1,0 +1,55 @@
+<!-- //...................................................antigravity.id..........................................................-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marlboro Pursue Flavour</title>
+    <meta name="viewport" content="width = device-width, initial-scale =1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = 0, minimal-ui" />
+
+	<link rel="shortcut icon" href="assets/images/favicon.png"/>
+	<meta name="description" content="Marlboro Pursue Flavour" />
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/libs-car.min.js"></script>
+
+</head>
+<body>
+    
+    <div class="preloader-model preloader-model--mod">
+        <div>
+            <p id="textLoading3Dcar">Loading 3D Car ...</p>
+        </div>
+    </div>
+    <div class="drag-info hide">
+        <lottie-player src="./assets/motion/Drag/data.json" background="transparent" speed="1" loop id="dragInfo"></lottie-player>
+    </div>
+
+    <main>
+        <div class="car-thumb hide">
+            <nav id="carThumb">
+                <a href="javascript:;" onclick="selectCar(0, 'click')"><div class="img"><img src="./assets/images/car-icon-1.png" alt="Marlboro"></div></a>
+                <a href="javascript:;" onclick="selectCar(1, 'click')"><div class="img"><img src="./assets/images/car-icon-2.png" alt="Marlboro"></div></a>
+            </nav>
+            <div class="car-thumb__button" id="carThumbButton" onclick="confirmCar()"><div class="inner">
+                <div></div>
+                <span>START<br>NOW</span>
+            </div></div>
+        </div>
+        <div class="car-title hide">
+            <h4>Choose Car and<br>Chase Your Freedom</h4>
+            <div id="appendCarThumb" class="car-thumb car-thumb--mod"></div>
+        </div>
+        <div class="car-name hide">
+            <div class="car-name__wrapper" id="carName">
+                <h2><span>SUPER</span>&nbsp;<span>CAR</span></h2>
+                <h2><span>SUV</span>&nbsp;<span>CAR</span></h2>
+            </div>
+            <div id="appendCarThumbButton" class="car-thumb car-thumb--mod"></div>
+        </div>
+        <canvas class="webgl"></canvas>
+    </main>
+
+    
+    <script src="js/default.min-min.js"></script>
+    <script src="js/app/app-car.min-min.js"></script>
+</body>
+</html>
