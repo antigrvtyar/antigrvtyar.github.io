@@ -24,6 +24,10 @@ body{
   left: 0;
   width: 100%;
   height: calc(100% - 120px);
+  @media only screen and (max-width: 788px) {
+    top: 56px;
+    height: calc(100% - 60px - 56px);
+  }
 }
 
 .main{
