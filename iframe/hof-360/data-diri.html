@@ -1,0 +1,79 @@
+<!-- //...................................................antigravity.id..........................................................-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magnum Hall of Fame</title>
+
+    <meta name="viewport" content="width = device-width, initial-scale =1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = 0, minimal-ui" />
+
+	<link rel="shortcut icon" href="assets/images/favicon.png"/>
+	<meta name="description" content="Magnum Hall of Fame" />
+    <link rel="stylesheet" href="css/main.css">
+
+    
+    <script src="js/libs-datadiri.min.js"></script>
+    <script type="text/javascript" src="js/axios.min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=vGAAhvkjdDwJvc66InVu7g&gtm_preview=env-178&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WSBDQZB');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body class="createalbum">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSBDQZB&gtm_auth=vGAAhvkjdDwJvc66InVu7g&gtm_preview=env-178&gtm_cookies_win=x"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    
+
+    <!-- MODAL -->
+    <div class="backdrop backdrop--mod hide" id="backdrop">&nbsp;</div>
+    <!-- !MODAL -->
+    
+    <div class="navbar">
+        <div class="navbar__wrapper">
+            <a href="javascript:;" onclick="openLink('create-album.html')"><div class="block-image"><img src="./assets/images/icon-back.svg" alt="<"></div></a>
+            <p>Isi Data Diri Lo</p>
+        </div>
+    </div>
+    <main>
+        <div class="createalbum-template">
+            <div class="createalbum-form">
+                <!-- <form id="createAlbumForm"> -->
+                    <label class="input-label">
+                        <p>Nama Lengkap<span>*</span></p>
+                        <input type="text" placeholder="Isi nama lo disini" class="input" name="namalengkap">
+                    </label>
+                    <div class="divider divider--margin-normal"></div>
+                    <div class="divider divider--margin-small"></div>
+                    <label class="input-label" for="nomortelepon">
+                        <p>Nomor Telepon<span>*</span></p>
+                        <div class="input-hp">
+                            <input type="text" class="input" name="code" value="+62" readonly>
+                            <input type="number" placeholder="Isi nomor telepon lo disini" class="input" id="nomortelepon" name="nomortelepon">
+                        </div>
+                    </label>
+                    <div class="divider divider--margin-normal"></div>
+                    <div class="divider divider--margin-small"></div>
+                    <label class="input-label">
+                        <p>Alamat Lengkap<span>*</span></p>
+                        <textarea name="alamatlengkap" id="" rows="5" class="input" placeholder="Isi alamat lengkap lo disini"></textarea>
+                    </label>
+                    <div class="divider divider--margin-normal"></div>
+                    <div class="divider divider--margin-small"></div>
+                    <button class="button button--block button--mod" onclick="submitDataDiri()">Kirim Data Diri</button>
+                <!-- </form> -->
+            </div>
+        </div>
+    </main>
+
+    
+    <script type="text/javascript" src="js/app-default.js"></script>
+    <script type="text/javascript" src="js/app-datadiri.js"></script>
+</body>
+</html>

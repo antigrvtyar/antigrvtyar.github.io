@@ -1,0 +1,66 @@
+<!-- //...................................................antigravity.id..........................................................-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magnum Hall of Fame</title>
+
+    <meta name="viewport" content="width = device-width, initial-scale =1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = 0, minimal-ui" />
+
+	<link rel="shortcut icon" href="assets/images/favicon.png"/>
+	<meta name="description" content="Magnum Hall of Fame" />
+    <link rel="stylesheet" href="css/main.css">
+
+    
+    <script src="js/libs-halloffame.min.js"></script>
+    <script type="text/javascript" src="js/axios.min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=vGAAhvkjdDwJvc66InVu7g&gtm_preview=env-178&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WSBDQZB');</script>
+        <!-- End Google Tag Manager -->
+
+</head>
+<body class="halloffame">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSBDQZB&gtm_auth=vGAAhvkjdDwJvc66InVu7g&gtm_preview=env-178&gtm_cookies_win=x"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    
+
+    <!-- MODAL -->
+    <!-- mdl fame -->
+    <div class="modal modal--center hide" id="modalFameDetail">
+        <div class="modal__content modal__content--mod">
+            <div class="modal__close modalClose"><a href="javascript:;"><div class="block-image"><img src="./assets/images/icon-close.svg" alt="X"></div></a></div>
+
+            <div class="halloffame-block" id="modalLabel">
+                <div class="halloffame-block__label"><div class="block-image"><img src="./assets/images/label-editor-choice.png" alt="Editor's Choice"></div></div>
+                <div class="block-image halloffame-block__image"><img src="" alt="Hall of Fame" id="modalAlbum"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="backdrop hide" id="backdrop">&nbsp;</div>
+    <!-- !MODAL -->
+    
+    <div class="navbar">
+        <div class="navbar__wrapper">
+            <a href="javascript:;" onclick="openLink('index.html')"><div class="block-image"><img src="./assets/images/icon-back.svg" alt="<"></div></a>
+            <p>Hall of Fame</p>
+        </div>
+    </div>
+    <main>
+        <div class="halloffame-list">
+            <div id="hallofamelist"></div>
+        </div>
+    </main>
+
+    
+    <script type="text/javascript" src="js/app-default.js"></script>
+    <script type="text/javascript" src="js/app-halloffame.js"></script>
+</body>
+</html>

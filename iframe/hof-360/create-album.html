@@ -1,0 +1,181 @@
+<!-- //...................................................antigravity.id..........................................................-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magnum Hall of Fame</title>
+
+    <meta name="viewport" content="width = device-width, initial-scale =1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = 0, minimal-ui" />
+
+	<link rel="shortcut icon" href="assets/images/favicon.png"/>
+	<meta name="description" content="Magnum Hall of Fame" />
+    <link rel="stylesheet" href="css/main.css">
+
+    
+    <script src="js/libs-createalbum.min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=vGAAhvkjdDwJvc66lnVu7g&gtm_preview=env-178&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WSBDQZB');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body class="createalbum">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSBDQZB&gtm_auth=vGAAhvkjdDwJvc66lnVu7g&gtm_preview=env-178&gtm_cookies_win=x"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    
+
+    <!-- MODAL -->
+    <div class="backdrop backdrop--mod hide" id="backdrop">&nbsp;</div>
+    <!-- !MODAL -->
+    
+    <div class="navbar">
+        <div class="navbar__wrapper">
+            <a href="javascript:;" onclick="openLink('index.html')"><div class="block-image"><img src="./assets/images/icon-back.svg" alt="<"></div></a>
+            <p>Pilih Cover Album Lo</p>
+        </div>
+    </div>
+    <main>
+        <div class="createalbum-proses">
+            <div class="createalbum-proses__wrapper">
+                <div class="createalbum-proses__bg album-1" id="frameAlbumStyle">
+                    <h2 id="frameAlbumNamaBand">Magnum</h2>
+                    <div class="block-image"><img src="./assets/images/frame/Album - 01.png" alt="Magnum" id="frameAlbum"></div>
+                    <div class="block-image block-image-foto"><img src="./assets/images/default/default-1.jpeg" alt="Magnum" id="frameAlbumFoto"></div>
+                </div>
+                <div class="createalbum-proses__canvas" id="frameAlbumCanvas"></div>
+            </div>
+        </div>
+        <div class="createalbum-editfoto hide" id="createAlbumEditFoto">
+            <div class="navbar">
+                <div class="navbar__wrapper">
+                    <a href="javascript:;" onclick="fotoEdit('close')"><div class="block-image"><img src="./assets/images/icon-back.svg" alt="<"></div></a>
+                    <p>Atur Posisi Foto Lo</p>
+                </div>
+            </div>
+            <div class="createalbum-editfoto__content">
+                <div class="createalbum-editfoto__canvas" id="takeToCanvas"></div>
+                <div class="createalbum-editfoto__area" id="finalResultEdit">
+                    <div class="inner">
+                        <div class="createalbum-editfoto__area-wrapper" id="moveResultEdit"><img src="" alt="Magnum Image" id="fotoUploadEdit"></div>
+                    </div>
+                </div>
+                <div class="createalbum-editfoto__area createalbum-editfoto__area--mod" id="finalResultEditMod">
+                    <div class="inner">
+                        <div class="createalbum-editfoto__area-wrapper" id="moveResultEditMod"><img src="" alt="Magnum Image" id="fotoUploadEditMod"></div>
+                        <!-- <img src="" alt="Magnum Image" id="fotoUploadEditMod"> -->
+                    </div>
+                </div>
+                <div class="createalbum-editfoto__action">
+                    <a href="javascript:;" onclick="fotoEdit('moveup')"><div class="block-image"><img src="./assets/images/icon-move-up.svg" alt=""></div></a>
+                    <a href="javascript:;" onclick="fotoEdit('movedown')"><div class="block-image"><img src="./assets/images/icon-move-down.svg" alt=""></div></a>
+                    <!-- <a href="javascript:;" onclick="fotoEdit('rotate')"><div class="block-image"><img src="./assets/images/icon-rotate.svg" alt=""></div></a> -->
+                    <a href="javascript:;" onclick="fotoEdit('zoomin')"><div class="block-image"><img src="./assets/images/icon-zoom-in.svg" alt=""></div></a>
+                    <a href="javascript:;" onclick="fotoEdit('zoomout')"><div class="block-image"><img src="./assets/images/icon-zoom-out.svg" alt=""></div></a>
+                    <button class="button" onclick="fotoEdit('simpan')" id="btnSimpanFoto">Simpan Foto</button>
+                </div>
+            </div>
+        </div>
+        <div class="createalbum-template">
+            <div class="createalbum-slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="block-image"><img src="./assets/images/frame/All-AlbumArtwork-PNG-01.png" alt="Magnum"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="block-image"><img src="./assets/images/frame/All-AlbumArtwork-PNG-02.png" alt="Magnum"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="block-image"><img src="./assets/images/frame/All-AlbumArtwork-PNG-03.png" alt="Magnum"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="block-image"><img src="./assets/images/frame/All-AlbumArtwork-PNG-04.png" alt="Magnum"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="createalbum-form">
+                <!-- <form id="createAlbumForm"> -->
+                    <label class="input-label">
+                        <p>Isi Nama Band Lo Disini</p>
+                        <input type="text" placeholder="Isi nama band lo di sini" maxlength="16" class="input" name="namaband">
+                        <span>Maksimal 16 karakter</span>
+                    </label>
+                    <div class="divider divider--margin-normal"></div>
+                    <div class="divider divider--margin-small"></div>
+                    <div class="input-label"> 
+                        <input type="text" name="fotoFinalUpload" id="fotoFinalUpload" style="width: 0;height: 0;pointer-events: none;opacity: 0;">
+                        <p>Upload Foto Band Lo</p>
+                        <div class="createalbum-form-foto">
+                            <div class="createalbum-form-foto__wrapper">
+                                <div class="createalbum-form-foto__add">
+                                    <label for="input-file">
+                                        <input accept="image/*" type="file" name="input-file" id="input-file" onchange="readURL(this)">
+                                    </label>
+                                    <div class="inner">
+                                        <div class="block-image"><img src="./assets/images/icon-plus.svg" alt="+"></div>
+                                    </div>
+                                </div>
+                                <div class="createalbum-form-foto__default">
+                                    <div class="createalbum-form-foto__block hide" id="hasilFotoUploadBlock" onclick="pilihFoto(0)">
+                                        <input type="radio" value="0" name="fotodefault" id="foto-0">
+                                        <label class="label-foto" for="foto-0">
+                                            <div class="block-image"><img id="hasilFotoUpload" src="" alt=""></div>
+                                        </label>
+                                    </div>
+                                    <!-- <div class="createalbum-form-foto__block" onclick="pilihFoto(1)">
+                                        <input type="radio" value="1" name="fotodefault" id="foto-1">
+                                        <label class="label-foto" for="foto-1">
+                                            <div class="block-image"><img src="./assets/images//default/default-1.jpeg" alt="Magnum"></div>
+                                        </label>
+                                    </div>
+                                    <div class="createalbum-form-foto__block" onclick="pilihFoto(2)">
+                                        <input type="radio" value="2" name="fotodefault" id="foto-2">
+                                        <label class="label-foto" for="foto-2">
+                                            <div class="block-image"><img src="./assets/images//default/default-2.jpeg" alt="Magnum"></div>
+                                        </label>
+                                    </div>
+                                    <div class="createalbum-form-foto__block" onclick="pilihFoto(3)">
+                                        <input type="radio" value="3" name="fotodefault" id="foto-3">
+                                        <label class="label-foto" for="foto-3">
+                                            <div class="block-image"><img src="./assets/images//default/default-3.jpeg" alt="Magnum"></div>
+                                        </label>
+                                    </div>
+                                    <div class="createalbum-form-foto__block" onclick="pilihFoto(4)">
+                                        <input type="radio" value="4" name="fotodefault" id="foto-4">
+                                        <label class="label-foto" for="foto-4">
+                                            <div class="block-image"><img src="./assets/images//default/default-4.jpeg" alt="Magnum"></div>
+                                        </label>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <span class="error" id="errorFoto" style="display: none;">Lo belum upload/pilih foto!</span>
+                        <span class="error" id="errorFoto2" style="display: none;">Ukuran file foto maksimal 2mb!</span>
+                        <span>Lo bisa upload foto dengan ukuran 2mb.</span>
+                    </div>
+                    <div class="divider divider--margin-normal"></div>
+                    <div class="divider divider--margin-small"></div>
+                    <label class="input-label">
+                        <div class="input-checkbox">
+                            <input type="checkbox" name="setujumateri" value="true">
+                            <span>Dengan ini band lo setuju kalo materinya dapat digunakan oleh pihak magnum.id</span>
+                        </div>
+                    </label>
+                    <div class="divider divider--margin-normal"></div>
+                    <div class="divider divider--margin-small"></div>
+                    <button class="button button--block button--mod" onclick="submitCoverAlbum()" id="submitCoverAlbum">Submit Cover Album</button>
+                <!-- </form> -->
+            </div>
+        </div>
+    </main>
+
+    
+    <script type="text/javascript" src="js/app-default.js"></script>
+    <script type="text/javascript" src="js/app-createalbum.js"></script>
+</body>
+</html>

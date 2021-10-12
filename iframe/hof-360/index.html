@@ -1,0 +1,91 @@
+<!-- //...................................................antigravity.id..........................................................-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magnum Hall of Fame</title>
+
+    <meta name="viewport" content="width = device-width, initial-scale =1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = 0, minimal-ui" />
+
+	<link rel="shortcut icon" href="assets/images/favicon.png"/>
+	<meta name="description" content="Magnum Hall of Fame" />
+    <link rel="stylesheet" href="css/main.css">
+
+    
+    <script src="js/libs.min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=vGAAhvkjdDwJvc66InVu7g&gtm_preview=env-178&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WSBDQZB');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSBDQZB&gtm_auth=vGAAhvkjdDwJvc66InVu7g&gtm_preview=env-178&gtm_cookies_win=x"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- MODAL -->
+    <!-- mdl howtoplay -->
+    <div class="modal modal--center" id="modalHowToPlay">
+        <div class="modal__content">
+            <div class="htp-slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="modal-htp"><div class="block-image"><img src="assets/images/htp-1.png" alt="Magnum"></div></div>
+                    <div class="divider divider--margin-small"></div>
+                    <div class="divider divider--margin-small"></div>
+                    <h3 class="modal-title modal-title--mod text-center">Bikin Cover Album</h3>
+                    <div class="modal-text modal-text--mod text-center">
+                        <p>Modif cover album versi lo disini</p>
+                    </div>
+                    <div class="divider divider--margin-normal"></div>
+                    <button class="button button--block" onclick="nextSlideHTP(1)">Selanjutnya</button>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="modal-htp"><div class="block-image"><img src="assets/images/htp-2.png" alt="Magnum"></div></div>
+                    <div class="divider divider--margin-small"></div>
+                    <div class="divider divider--margin-small"></div>
+                    <h3 class="modal-title modal-title--mod text-center">Ambil Hadiah Lo</h3>
+                    <div class="modal-text modal-text--mod text-center">
+                        <p>Banyak hadiah yang bisa lo dapetin disini</p>
+                    </div>
+                    <div class="divider divider--margin-normal"></div>
+                    <button class="button button--block" onclick="nextSlideHTP(2)">Selanjutnya</button>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="modal-htp"><div class="block-image"><img src="assets/images/htp-3.png" alt="Magnum"></div></div>
+                    <div class="divider divider--margin-small"></div>
+                    <div class="divider divider--margin-small"></div>
+                    <h3 class="modal-title modal-title--mod text-center">Explore Hall of Fame Disini</h3>
+                    <div class="modal-text modal-text--mod text-center">
+                        <p>Lo bisa explore dan liat liat hall of fame disini dengan teknologi 360</p>
+                    </div>
+                    <div class="divider divider--margin-normal"></div>
+                    <button class="button button--block" onclick="nextSlideHTP(3)">Mulai Sekarang</button>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="backdrop" id="backdrop">&nbsp;</div>
+    <!-- !MODAL -->
+
+    
+    <!-- 360 -->
+    <div id="panel">
+        <div id="panorama"></div>
+    </div>
+    <!-- !360 -->
+
+    
+    <script type="text/javascript" src="js/app-default.js"></script>
+    <script type="text/javascript" src="js/panorama.js"></script>
+    <script type="text/javascript" src="js/app-360.js"></script>
+</body>
+</html>

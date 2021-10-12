@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'The Grim Raiders';
+    src: url('TheGrimRaiders-Regular.woff2') format('woff2'),
+        url('TheGrimRaiders-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

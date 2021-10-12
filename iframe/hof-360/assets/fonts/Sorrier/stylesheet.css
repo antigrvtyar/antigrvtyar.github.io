@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Sorrier Statements';
+    src: url('Sorrier-Statements.woff2') format('woff2'),
+        url('Sorrier-Statements.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

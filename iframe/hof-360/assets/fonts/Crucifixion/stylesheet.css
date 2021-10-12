@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Crucifixion';
+    src: url('Crucifixion-Regular.woff2') format('woff2'),
+        url('Crucifixion-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
